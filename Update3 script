@@ -94,9 +94,9 @@ local Button = MainTab:CreateButton({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "💥Destruction Simulator Aqua Modz",
+   Name = "Pets Go Not Work",
    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/FatalityyHub/KeylessScript/refs/heads/main/PetsGo'))()
    end,
 })
 
@@ -109,7 +109,6 @@ local Paragraph = Tab:CreateParagraph({Title = "▶️Youtube", Content = "https
 local Paragraph = Tab:CreateParagraph({Title = "💡Suggestions", Content = "suggest games to add to the script. comment on my youtube video for your suggestions"})
 
 local Paragraph = Tab:CreateParagraph({Title = "📜Script", Content = "Credits to all owner of the script"})
-   
 
 local WalkspeedTab = Window:CreateTab("🚶Walkspeed", nil) -- Title, Image
 
@@ -124,16 +123,15 @@ WalkspeedTab:CreateSlider({
       end,
    })
 
-local JumpPowerTab = Window:CreateTab( "👣JumpPower",nil) -- Title, Image
+local JumpPowerTab = Window:CreateTab("🦶JumpPower", nil) -- Title, Image
 
 JumpPowerTab:CreateSlider{
-      Name = "Adjust JumpPower",
-      Range = {50, 500},
-      Increment = 1,
-      Suffix = "JumpPower",
-      CurrentValue = 50,
-      Callback = function(Value)
-
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+   Name = "Adjust JumpPower",
+   Range = {50, 500},
+   Increment = 1,
+   Suffix = "JumpPower",
+   CurrentValue = 50,
+   Callback = function(Value)
+      game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
    end,
 }
