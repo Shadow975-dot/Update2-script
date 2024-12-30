@@ -123,15 +123,14 @@ WalkspeedTab:CreateSlider({
       end,
    })
 
-local JumpPowerTab = Window:CreateTab("🦶JumpPower", nil) -- Title, Image
+local MainTab = Window:CreateTab("Other Hub", 4483362458) -- Title, Image
+local MainSection = MainTab:CreateSection( "Other Hub")
 
-JumpPowerTab:CreateSlider{
-   Name = "Adjust JumpPower",
-   Range = {50, 500},
-   Increment = 1,
-   Suffix = "JumpPower",
-   CurrentValue = 50,
-   Callback = function(Value)
-      game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+local Button = MainTab:CreateButton({
+   Name = "🌐W-Azure",
+   Callback = function()
+         
+        getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
    end,
-}
+})
